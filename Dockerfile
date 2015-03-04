@@ -1,4 +1,4 @@
-FROM node:0.10.35
+FROM node:0.10.36
 
 MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
 
@@ -6,7 +6,7 @@ RUN apt-get update \
 	&& DEBIAN_FRONTEND=noninteractive \
 	apt-get install -y cmake
 
-ENV OPENCV_VERSION 2.4.10.1
+ENV OPENCV_VERSION 2.4.11
 
 RUN git clone https://github.com/itseez/opencv.git /usr/local/src/opencv
 
