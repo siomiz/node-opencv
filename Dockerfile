@@ -1,30 +1,12 @@
-FROM node:0.10.36
+FROM node:latest
 
 MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
 
-RUN apt-get update \
-	&& DEBIAN_FRONTEND=noninteractive \
-	apt-get install -y cmake
+ENV OPENCV_VERSION 3.0.0
 
-ENV OPENCV_VERSION 2.4.11
-
-RUN git clone https://github.com/itseez/opencv.git /usr/local/src/opencv
-
-WORKDIR /usr/local/src/opencv
-
-RUN git checkout ${OPENCV_VERSION} \
-	&& mkdir release
-
-WORKDIR /usr/local/src/opencv/release
-
-RUN cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
-
-RUN make && make install
-
-WORKDIR /
-
-RUN rm -rf /usr/local/src/opencv \
-	&& apt-get purge -y cmake
+COPY build.sh /build.sh
+RUN bash /build.sh \
+	&& rm /build.sh
 
 ENV LD_LIBRARY_PATH /usr/local/lib
 

@@ -1,4 +1,4 @@
-FROM siomiz/node-opencv:0.10.36
+FROM siomiz/node-opencv:latest
 
 MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
 
