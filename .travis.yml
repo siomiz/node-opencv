@@ -7,3 +7,8 @@ services:
 
 before_install:
   - docker build -t siomiz/node-opencv .
+
+install: true
+
+script:
+  - docker run siomiz/node-opencv npm install opencv
