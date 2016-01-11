@@ -1,7 +1,7 @@
 # node-opencv
-### Docker Automated Build Repository/Image for node:latest + opencv 3.0.0
+### Docker Automated Build Repository/Image for node:latest + opencv 3.1.0
 
-Official Node.js "latest" image + OpenCV 3.0.0 (built from [source][1], not a full stack) for `npm install opencv` to work.
+Official Node.js "latest" image + OpenCV 3.1.0 (built from [source][1], not a full stack) for `npm install opencv` to work.
 
 `onbuild` tag is available.
 
