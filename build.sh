@@ -11,7 +11,7 @@ git checkout ${OPENCV_VERSION} \
 
 cd /usr/local/src/opencv/release
 
-cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_IPP=ON ..
 
 make && make install
 
