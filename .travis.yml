@@ -3,7 +3,7 @@ sudo: required
 language: node_js
 
 env:
-  - BUILD_DIR=.
+  - BUILD_DIR=2.4.x
 
 services:
   - docker
