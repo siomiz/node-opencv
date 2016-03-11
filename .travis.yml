@@ -2,16 +2,13 @@ sudo: required
 
 language: node_js
 
-env:
-  - BUILD_DIR=2.4.x
-
 services:
   - docker
 
 before_install:
-  - docker build -t siomiz/node-opencv $BUILD_DIR
+  - docker build -t siomiz/node-opencv .
 
 install: true
 
 script:
-  - docker run siomiz/node-opencv npm install opencv
+  - docker run siomiz/node-opencv bash -c "npm install opencv && node -p \"require('opencv')\""
