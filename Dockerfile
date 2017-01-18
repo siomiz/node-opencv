@@ -2,7 +2,7 @@ FROM node:latest
 
 MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
 
-ENV OPENCV_VERSION 3.1.0
+ENV OPENCV_VERSION 3.2.0
 
 COPY build.sh /build.sh
 RUN bash /build.sh \
