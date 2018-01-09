@@ -1,6 +1,6 @@
 FROM siomiz/node-opencv:2.4.x
 
-MAINTAINER Tomohisa Kusano <siomiz@gmail.com>
+LABEL maintainer="Tomohisa Kusano <siomiz@gmail.com>"
 
 WORKDIR /usr/src/app
 
